@@ -11,6 +11,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+ Route::get('/', function () {
+     return view('welcome');
+ });
+
+// Route::get('/contact', function () {
+////     return view('contact');
+// });
+
+ Route::get('/contact', [
+     'uses' => 'ContactMessageController@create'
+ ]);
+
+ Route::post('/contact', [
+     'uses' => 'ContactMessageController@store',
+     'as' => 'contact.store'
+ ]);
+
+ Route::get('send-main', 'HomeController@sendMail');
+
+

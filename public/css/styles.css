@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    max-width: 700px;
+    margin: 50px auto;
+    background: #575860;
+    padding: 40px;
+    box-shadow: 0 0 5px rgba(0.0.0.0.5);
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 50px;
+    font-size: 35px;
+}
+
+.address {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.inner-address p {
+    font-size: 12px;
+}
+
+.inner-address .fas {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.form-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.input-form {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.inner-msg {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input > input {
+    border: 0;
+    width: 300px;
+    padding: 10px 20px;
+    outline: none;
+}
+
+.msg > textarea {
+    width: 100%;
+    border: 0;
+    padding: 10px 20px;
+    outline: none;
+    min-height: 100px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #575860;
+    border: 2px solid #fff;
+    padding: 10px 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+input[type="submit"]:hover {
+    background: #fff;
+    color: #575860;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.inner-social .fab {
+    margin: 0 20px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.fab:hover {
+    color: #fff;
+}
+
+::-webkit-input-placeholder {
+     color: #575860;
+    opacity: 0.75;
+}
+
+::-moz-placeholder {
+    color: #575860;
+    opacity: 0.75;
+}
+
+::-ms-input-placeholder {
+    color: #575860;
+    opacity: 0.75;
+}
+
+small.invalid-feedback {
+    color: red;
+}
+
+.message-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center
+}
+
+@media screen and (max-width: 686px) {
+    .input-form {
+        flex-direction: column;
+    }
+    .input:first-child > input {
+        margin-bottom: 20px;
+    }
+    .form .input > input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .address,
+    .social-media {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inner-address,
+    .inner-social {
+        margin-bottom: 20px;
+    }
+}
