@@ -1,4 +1,10 @@
+@charset "UTF-8";
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/*HW - Make more css files - Most general css first and then get more specific, more than one css file for different pages*/
+
+/*General CSS*/
 
 *{
     margin: 0;
@@ -9,20 +15,87 @@
     box-sizing: border-box;
 }
 
-.wrapper{
+body.bkg {
+    background-color: #2f2f2f;
+}
+
+.wrapperSmall{
+    /*max-width: 700px;*/
     max-width: 700px;
     margin: 50px auto;
-    background: #575860;
-    padding: 40px;
+    /*background: #575860;*/
+    padding: 30px 30px 40px;
     box-shadow: 0 0 5px rgba(0.0.0.0.5);
 }
 
-h1 {
+.wrapperSmall > h1 {
     text-align: center;
     color: #fff;
     margin-bottom: 50px;
     font-size: 35px;
 }
+
+.flex-container-wide {
+    display: flex;
+    max-width: 880px;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+p {
+    color: #fff;
+}
+
+h1 {
+    letter-spacing: 0.05em;
+}
+
+h2 {
+    color: #fff;
+    line-height: 1.4em;
+}
+
+/*About Page CSS*/
+
+.wrapperAbout {
+    max-width: 1000px;
+    margin: 50px auto 50px;
+    padding: 30px 65px 0px;
+    box-shadow: 0 0 5px rgba(0.0.0.0.5);
+    color: #fff;
+}
+
+.about-text {
+    padding-left: 60px;
+    max-width: 600px;
+    border-left: 2px solid rgba(255,255,255,0.5);
+    border-width: 0px 0px 0px 5px;
+}
+
+.about-text p {
+    margin: 30px 0px;
+    line-height: 1.6em;
+}
+
+.about-image {
+    max-width: 150px;
+}
+
+.social-left {
+    display: flex;
+    justify-content: flex-start;
+    margin: 30px 30px 30px -20px;
+}
+
+.inner-social-left .fab {
+    margin-left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+/*Contact Form CSS*/
 
 .address {
     display: flex;
@@ -79,7 +152,7 @@ h1 {
     border: 0;
     padding: 10px 20px;
     outline: none;
-    min-height: 100px;
+    min-height: 200px;
     resize: vertical;
 }
 
@@ -111,11 +184,11 @@ input[type="submit"]:hover {
 }
 
 .fab:hover {
-    color: #fff;
+    color: #8c8c8c;
 }
 
 ::-webkit-input-placeholder {
-     color: #575860;
+    color: #575860;
     opacity: 0.75;
 }
 
@@ -167,4 +240,83 @@ small.invalid-feedback {
     .inner-social {
         margin-bottom: 20px;
     }
+}
+
+/*Main Layout CSS*/
+
+/*Add media queries*/
+
+.menuWrapper{
+    max-width: 1000px;
+    margin: auto;
+}
+
+nav.topNav ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-top: 3px;
+}
+
+.flex-container > li {
+    margin: 10px;
+    line-height: 10px;
+    background-color: #00000000;
+}
+
+.flex-container > li > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.flex-container > li > a:link {
+    color: #fff;
+}
+
+.flex-container > li > a:visited {
+    color: #fff;
+}
+
+.flex-container > li > a:hover {
+    color: #bfbfbf;
+}
+
+.flex-container > li > a:active {
+    line-height: 14px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    padding: 20px 0px 10px 0px;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+}
+
+.logoView {
+    min-width: 400px;
+}
+
+.logoView > a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.logoView > a:link {
+    color: #bfbfbf;
+
+}
+
+.logoView > a:visited {
+    color: #fff;
+}
+
+.logoView > a:hover {
+    color: #bfbfbf;
+    text-decoration: none;
+}
+
+.row-center {
+    justify-content: center;
 }
